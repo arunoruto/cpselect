@@ -5,9 +5,9 @@ Does not exactly the same as cpselect does in MATLAB, but similar.
 
 ## Prerequisites
 You will need to have the following packages installed:
-* matplotlib (tested with 3.0.1)
-* Pillow (tested with 5.3.0)
-* PyQt5 (tested with 5.11.3)
+- matplotlib (tested with 3.0.1)
+- Pillow (tested with 5.3.0)
+- PyQt5 (tested with 5.11.3)
 
 
 ## Installing and import
