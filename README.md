@@ -1,5 +1,7 @@
 # cpselect
-Does not exactly the same as cpselect does in MATLAB, but similiar.
+**Continuation of the [cpselect project](https://github.com/hofmann-tobias/cpselect) from Tobias Hoffmann**
+
+Does not exactly the same as cpselect does in MATLAB, but similar.
 
 ## Prerequisites
 You will need to have the following packages installed:
@@ -10,21 +12,27 @@ You will need to have the following packages installed:
 
 ## Installing and import
 
-Install the package using pip
+Install the package using pip (since `cpselect` is already taken, I have opted for `cpselect2`)
 
-`pip install cpselect`
+```sh
+pip install cpselect2
+```
 
 and import it with
 
-`from cpselect.cpselect import cpselect`
+```py
+from cpselect.cpselect import cpselect
+```
 
 ## Using cpselect
 Just call function `cpselect`. The function takes two inputs, two strings with the path to your pictures.
 
-`controlpointlist = cpselect("path/to/image1", "path/to/image2")`
+```py
+controlpointlist = cpselect("path/to/image1", "path/to/image2")
+```
 
 It will return a list object, which contains a dictionary for each control point.
-
+```py
     [
         {
         'point_id': 1,
@@ -41,3 +49,4 @@ It will return a list object, which contains a dictionary for each control point
         'img2_y': 101.68856148684131,
         }
     ]
+```

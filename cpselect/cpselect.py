@@ -1,4 +1,5 @@
 import sys, os
+import numpy as np
 
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -20,8 +21,8 @@ def cpselect(img_path1, img_path2):
     """
     global img1
     global img2
-    img1 = plt.imread(img_path1)
-    img2 = plt.imread(img_path2)
+    img1 = plt.imread(img_path1) if isinstance(img_path1, str) else np.array(img_path1)
+    img2 = plt.imread(img_path2) if isinstance(img_path2, str) else np.array(img_path2)
 
     app = QApplication(sys.argv)
     cps = _MainWindow()
@@ -125,6 +126,9 @@ class _MainWindow(QMainWindow):
 
     def pickmodechange(self):
 
+        if not hasattr(self.wp.canvas.toolbar, '_active') and hasattr(self.wp.canvas.toolbar, 'mode'):
+            setattr(self.wp.canvas.toolbar, '_active', self.wp.canvas.toolbar.mode.value)
+        
         if self.wp.canvas.toolbar._active in ['', None]:
             if self.wp.canvas.pickmode == True:
                 self.wp.canvas.pickMode_changed = True
@@ -159,6 +163,9 @@ class _MainWindow(QMainWindow):
 
     def updateGUI(self):
 
+        if not hasattr(self.wp.canvas.toolbar, '_active') and hasattr(self.wp.canvas.toolbar, 'mode'):
+            setattr(self.wp.canvas.toolbar, '_active', self.wp.canvas.toolbar.mode.value)
+        
         if self.wp.canvas.toolbar._active not in ['', None]:
             self.wp.canvas.pickmode = False
             self.wp.canvas.pickMode_changed = True
