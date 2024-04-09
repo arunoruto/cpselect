@@ -7,9 +7,9 @@
 
 I have fixed the bug caused by the [newer version of matplotlib](https://github.com/hofmann-tobias/cpselect/pull/5). I have also asked if this project could be maintained by some other larger libraries like [opencv](https://github.com/opencv/opencv/issues/23784) or [scikit-image](https://github.com/scikit-image/scikit-image/issues/7055), but none of them are able to do so!
 
-I will try to keep this project up to date, since some toolchains depend on it, but I am quite rusty with Qt...
+I will try to keep this project up to date since some toolchains depend on it, but my Qt knowledge is quite rusty...
 
-It would be amazing if we could switch from Qt to [streamlit](https://streamlit.io/) or [dash](https://dash.plotly.com/) for displaying the GUI in the browser!
+It would be amazing if we could switch from Qt to [streamlit](https://streamlit.io/) or [dash](https://dash.plotly.com/) for displaying the GUI in the browser! So if someone has an idea, please open up an issue for discussion :)
 
 ## Prerequisites
 You will need to have the following packages installed:
