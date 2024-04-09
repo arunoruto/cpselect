@@ -21,7 +21,7 @@ pip install cpselect2
 and import it with
 
 ```py
-from cpselect.cpselect import cpselect
+from cpselect2.cpselect import cpselect
 ```
 
 ## Using cpselect
