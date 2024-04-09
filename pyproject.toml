@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "cpselect"
+name = "cpselect2"
 version = "1.0.4"
 description = "Matlab's cpselect alternative for Python"
 authors = ["arunoruto"]
