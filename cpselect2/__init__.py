@@ -1,2 +1,2 @@
-from cpselect import cpselect
+from cpselect2 import cpselect
 
